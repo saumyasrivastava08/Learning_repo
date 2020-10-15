@@ -12,7 +12,8 @@ const fields = {
 
     ],
     [
-        {name: 'message', elementName: 'textarea', type: 'text',placeholder: 'Your messages'}
+        {name: 'message', elementName: 'textarea', type: 'text',placeholder: 'Your messages'},
+        {name: 'adress', elementName: 'textarea', type: 'text',placeholder: 'Your address'}
     ]
 
     ]
@@ -22,11 +23,11 @@ const fields = {
 class Contact extends Component {
      render(){
         return (
-            <section className="page-section" id="contact">
+            <section className="page-section" id="contact" style={{backgroundColor:'white'}}>
             <div className="container">
                 <div className="text-center">
-                    <h2 className="section-heading text-uppercase">Complaint Form</h2>
-                    <h3 className="section-subheading text-muted">Your details will be kept Confidential.</h3>
+                    <h2 className="section-heading text-uppercase" style={{backgroundColor:'black'}}>Complaint Form</h2>
+                    <h3 className="section-subheading text-muted" >Your details will be kept Confidential.</h3>
                 </div>
                 <form onSubmit={e => this.props.handleSubmit} name="sentMessage" novalidate="novalidate">
                     <div className="row align-items-stretch mb-5">
@@ -54,11 +55,15 @@ class Contact extends Component {
                                
                                 <p className="help-block text-danger"></p>
                             </div>
+                            <div className="form-group form-group-textarea mb-md-0">
+                               
+                               <p className="help-block text-danger"></p>
+                           </div>
                         </div>
                     </div>
                     <div className="text-center">
                         <div id="success"></div>
-                        <button className="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">submit</button>
+                        <button className="btn btn-secondary btn-xl text-uppercase" id="sendMessageButton" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -73,17 +78,19 @@ export default withFormik({
         email:'',
         phone:'',
         message:'',
+        adress:'',
 
     }),
       validationSchema: Yup.object().shape({
           name: Yup.string().required('You must give us your name'),
           email: Yup.string().email('give valid email').required('You must give us your email'),
-          phone: Yup.string().min(10, 'please provide your 10 digit number.').max(15,'your phone no is too long').required('we need a phone number'),
+          phone: Yup.string().min(10, 'please provide your 10 digit number.').max(15,'Kindly,give your phone number').required('we need a phone number'),
           message:Yup.string().required('Please file your Complaint'),
+          adress:Yup.string().required('Give your Address'),
       }),
      
     handleSubmit: (values, {setSubmitting}) => {
         console.log("VALUES", values);
-        alert("You have submitted form", JSON.stringify(values));
+        alert("You have submitted form!! Your details will be kept confidential", JSON.stringify(values));
     }
 })(Contact);

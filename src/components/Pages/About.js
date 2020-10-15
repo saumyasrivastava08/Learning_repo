@@ -1,24 +1,17 @@
 import React, {Component} from 'react';
 import Header from '../Common/Header';
-import image from '../assets/img/jj.jpeg';
+import image from '../assets/img/phone.jpg';
 
 class About extends Component {
      render(){
          return (
              <div>
-                  <Header 
-                   title="STOP RAPE"
-                   subtitle="Below are the Phone numbers"
-                   buttonText="Back to main window"
-                   link="/services"
-                   showButton={true}
-                   image={image}
-                 />
-                 <section className="page-section" id="about">
-            <div className="container">
+                  
+                 <section className="page-section" id="about" >
+            <div className="container" >
                 <div className="text-center">
-                    <h2 className="section-heading text-uppercase">About</h2>
-                    <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 className="section-heading text-uppercase">Phone Numbers</h2>
+                    <h3 className="section-subheading text-muted">Area Covered (Raebareli)</h3>
                 </div>
                 <ul className="timeline">
                     <li>

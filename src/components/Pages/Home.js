@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from '../Common/Header';
-import image from '../assets/img/header-bg.jpg';
+import image from '../assets/img/stop.jpg';
 
 import Services from '../Common/Services';
 import Portfolio from '../Common/Portfolio';
@@ -11,10 +11,10 @@ class Home extends Component{
         return (
             <div>
                  <Header 
-                   title="Play the Quiz!!"
-                   subtitle="APKA SWAGAT HAI"
-                   buttonText="CLICK TO KNOW MORE"
-                   link="/services"
+                   title="Immortality of her's is curse since his,
+                   Humanity had turned into brutality"
+                 buttonText="File Complaint"
+                   link="/contact"
                    showButton={true}
                    image={image}
                  />
