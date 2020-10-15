@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Home from './components/Pages/Home';
 import About from './components/Pages/About'
 import Contact from './components/Pages/Contact'
+import Team from './components/Common/Team';
 
 function App() {
   return (
@@ -25,7 +26,11 @@ function App() {
                path="/contact"
                component={Contact}
                />
-        <Home />
+                <Route
+               path="/team"
+               component={Team}
+               />
+
       </PageWrapper>
     </Router>
         
