@@ -16,7 +16,7 @@ class Team extends Component {
             <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <h2 class="section-heading text-uppercase">team</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <div class="row">
