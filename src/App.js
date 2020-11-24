@@ -6,10 +6,13 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Home from './components/Pages/Home';
 import About from './components/Pages/About'
 import Contact from './components/Pages/Contact'
+import Team from './components/Common/Team';
+import Portfolio from './components/Common/Portfolio'
 
 function App() {
   return (
     <Router>
+      
         <PageWrapper>
           
           <Route 
@@ -25,7 +28,15 @@ function App() {
                path="/contact"
                component={Contact}
                />
-        <Home />
+                <Route
+               path="/team"
+               component={Team}
+               />
+               <Route
+               path="/portfolio"
+               component={Portfolio}
+               />
+
       </PageWrapper>
     </Router>
         

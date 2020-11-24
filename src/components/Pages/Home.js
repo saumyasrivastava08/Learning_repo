@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Header from '../Common/Header';
 import image from '../assets/img/stop.jpg';
 
-import Services from '../Common/Services';
 import Portfolio from '../Common/Portfolio';
 import Team from '../Common/Team';
 import Timeline from '../Common/Timeline';
@@ -18,7 +17,7 @@ class Home extends Component{
                    showButton={true}
                    image={image}
                  />
-                 <Services />
+               
                  <Portfolio />
                  <Timeline />
                  <Team />
@@ -27,4 +26,4 @@ class Home extends Component{
     }
 
 }
-export default Home;
+export default Home

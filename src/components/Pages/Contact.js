@@ -29,7 +29,8 @@ class Contact extends Component {
                     <h2 className="section-heading text-uppercase" style={{backgroundColor:'black'}}>Complaint Form</h2>
                     <h3 className="section-subheading text-muted" >Your details will be kept Confidential.</h3>
                 </div>
-                <form onSubmit={e => this.props.handleSubmit} name="sentMessage" novalidate="novalidate">
+               
+                <form    action="https://formspree.io/f/myybebyy" method="POST" name="sentMessage" novalidate="novalidate">
                     <div className="row align-items-stretch mb-5">
                       {fields.sections.map((section, sectionIndex) =>  {
                         console.log("Rendering section", sectionIndex, "with", section);
@@ -46,7 +47,8 @@ class Contact extends Component {
                                       touched={(this.props.touched[field.name])}
                                       errors={this.props.errors[field.name]}
                                         />
-                                  })}
+                                  
+                                  })} 
                               </div>
                           )
                       })}
@@ -88,9 +90,9 @@ export default withFormik({
           message:Yup.string().required('Please file your Complaint'),
           adress:Yup.string().required('Give your Address'),
       }),
-     
-    handleSubmit: (values, {setSubmitting}) => {
-        console.log("VALUES", values);
-        alert("You have submitted form!! Your details will be kept confidential", JSON.stringify(values));
+      
+    handleSubmit: async (values, {setSubmitting}) => {
+        alert("You have submitted form", JSON.stringify(values));
     }
+    
 })(Contact);

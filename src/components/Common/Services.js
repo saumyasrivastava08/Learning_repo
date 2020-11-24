@@ -11,8 +11,8 @@ class Services extends Component {
             <section className="page-section" id="services">
             <div className="container">
                 <div className="text-center">
-                    <h2 className="section-heading text-uppercase">Services</h2>
-                    <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 className="section-heading text-uppercase">Contact Us</h2>
+                   
                 </div>
                 
                 <div className="row text-center">
