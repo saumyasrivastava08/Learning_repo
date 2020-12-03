@@ -30,7 +30,7 @@ class Team extends Component {
                    
                 </div>
                 <div class="row">
-                    <div class="col-lg-3 mx-auto text-center"> <ExternalLink to="/https://instagram.com/__no_rape.__?igshid=38ed7hhahchh">@__no_rape.__</ExternalLink></div>
+                    <div class="col-lg-3 mx-auto text-center"> <Link to={{ pathname: "https://example.zendesk.com/hc/en-us/articles/123456789-Privacy-Policies" }}  >@__no_rape.__ </Link></div>
                     <div class="col-lg-3 mx-auto text-center"><p class="large text-muted">Email us :- </p></div>
                     <div class="col-lg-3 mx-auto text-center"><p class="large text-muted">Email us :- </p></div>
                 </div>
